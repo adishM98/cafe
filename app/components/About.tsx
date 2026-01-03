@@ -57,6 +57,7 @@ export default function About() {
 
               {/* Coffee Machine */}
               <div className="relative coffee-machine-container">
+                {/* @ts-expect-error - lord-icon is a custom web component */}
                 <lord-icon
                   src="https://cdn.lordicon.com/xlsnmber.json"
                   trigger="loop"
@@ -65,7 +66,9 @@ export default function About() {
                     width: '280px',
                     height: '280px'
                   }}
-                ></lord-icon>
+                >
+                  {/* @ts-expect-error - lord-icon closing tag */}
+                </lord-icon>
               </div>
             </div>
           </motion.div>
