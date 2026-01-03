@@ -11,9 +11,9 @@ export default function Hero() {
   };
 
   return (
-    <section className="min-h-screen flex items-center justify-center px-6 py-20">
-      <div className="max-w-7xl mx-auto w-full grid md:grid-cols-2 gap-12 items-center">
-        {/* Left: Text Content */}
+    <section className="relative min-h-screen flex items-center justify-center px-6 py-20 bg-cafe-bg">
+      {/* Centered Text Content */}
+      <div className="relative z-10 max-w-4xl mx-auto text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -24,7 +24,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="text-6xl md:text-7xl font-bold tracking-tight text-cafe-text"
+            className="text-6xl md:text-7xl font-bold tracking-tight text-cafe-text hero-text-shadow"
           >
             Southentic Cafe
           </motion.h1>
@@ -42,7 +42,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
-            className="flex flex-col sm:flex-row gap-4 text-cafe-text/70"
+            className="flex flex-col sm:flex-row gap-4 text-cafe-text/70 justify-center"
           >
             <div className="flex items-center gap-2">
               <MapPin className="h-5 w-5 text-cafe-accent" />
@@ -58,7 +58,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="flex flex-col sm:flex-row gap-4 pt-4"
+            className="flex flex-col sm:flex-row gap-4 pt-4 justify-center"
           >
             <Button
               size="lg"
