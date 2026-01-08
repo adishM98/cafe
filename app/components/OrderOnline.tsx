@@ -10,7 +10,7 @@ import { restaurantInfo } from "@/app/data/restaurant";
 export default function OrderOnline() {
   const { swiggy, zomato } = restaurantInfo.deliveryPlatforms;
   return (
-    <section id="order" className="py-24 px-6 bg-white">
+    <section id="order" className="py-24 px-6 bg-white relative overflow-hidden">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -123,6 +123,28 @@ export default function OrderOnline() {
             </Card>
           </motion.div>
         </div>
+
+        {/* Delivery Scooter Background Animation */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 0.35 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.5 }}
+          className="scooter-delivery-container"
+        >
+          {/* @ts-expect-error - lord-icon is a custom web component */}
+          <lord-icon
+            src="https://cdn.lordicon.com/tkjuknug.json"
+            trigger="loop"
+            colors="primary:#D4A574,secondary:#8B7355"
+            style={{
+              width: '280px',
+              height: '280px'
+            }}
+          >
+            {/* @ts-expect-error - lord-icon closing tag */}
+          </lord-icon>
+        </motion.div>
       </div>
     </section>
   );

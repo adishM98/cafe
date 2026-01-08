@@ -1,13 +1,3 @@
-// Popular items - breakfast focused
-export const popularItems = [
-  { name: "Plain Dosa", price: 50 },
-  { name: "Masala Dosa", price: 60 },
-  { name: "Ghee Roast Dosa", price: 70 },
-  { name: "Podi Masala Dosa", price: 80 },
-  { name: "Set Dosa", price: 70 },
-  { name: "Rava Masala Dosa", price: 80 },
-];
-
 export const menu = {
   breakfast: {
     title: "Breakfast",
@@ -83,4 +73,12 @@ export const menu = {
       { name: "Fried Cheese Momo", price: 160 },
     ],
   },
+  
+  varietyDosa: {
+    title: "99-Variety Dosa",
+    note: "Choose from a variety of 99 different dosas!",
+    items: [
+      { name: "Cheese Dosa", price: 100 },
+    ],
+  }
 };

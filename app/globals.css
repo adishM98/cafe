@@ -73,4 +73,48 @@
       filter: none;
     }
   }
+
+  /* === ORDER ONLINE SECTION - DELIVERY SCOOTER === */
+  .scooter-delivery-container {
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: -10;
+    opacity: 0.35;
+    transition: opacity 0.3s ease;
+  }
+
+  .scooter-delivery-container:hover {
+    opacity: 0.45;
+  }
+
+  /* Responsive sizing */
+  @media (max-width: 1023px) {
+    .scooter-delivery-container lord-icon {
+      width: 240px !important;
+      height: 240px !important;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .scooter-delivery-container {
+      bottom: 1rem;
+      right: 1rem;
+    }
+
+    .scooter-delivery-container lord-icon {
+      width: 200px !important;
+      height: 200px !important;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .scooter-delivery-container {
+      transition: none;
+    }
+
+    .scooter-delivery-container:hover {
+      opacity: 0.35;
+    }
+  }
 }

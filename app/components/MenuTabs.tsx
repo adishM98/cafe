@@ -1,7 +1,7 @@
 "use client";
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Sunrise, Flame, Coffee } from "lucide-react";
+import { Sunrise, Flame, Coffee, ChefHat } from "lucide-react";
 import Image from "next/image";
 import { menu } from "@/app/data/menu";
 import { MenuSection } from "./MenuSection";
@@ -46,6 +46,13 @@ export default function MenuTabs() {
             <Image src="/momo.png" width={16} height={16} alt="Momos" className="w-4 h-4" />
             Momos
           </TabsTrigger>
+          <TabsTrigger
+            value="varietyDosa"
+            className="data-[state=active]:bg-cafe-accent data-[state=active]:text-white gap-2"
+          >
+            <ChefHat size={16} />
+            99-Variety Dosa
+          </TabsTrigger>
         </TabsList>
         </div>
 
@@ -79,6 +86,14 @@ export default function MenuTabs() {
           <MenuSection items={menu.momos.items} />
           <p className="text-xs text-cafe-text/60 text-center">
             {menu.momos.note}
+          </p>
+        </TabsContent>
+
+        {/* 99-Variety Dosa */}
+        <TabsContent value="varietyDosa" className="space-y-6">
+          <MenuSection items={menu.varietyDosa.items} />
+          <p className="text-xs text-cafe-text/60 text-center">
+            {menu.varietyDosa.note}
           </p>
         </TabsContent>
       </Tabs>
